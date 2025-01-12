@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>疫情期间牺牲人员纪念</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <h1>疫情期间牺牲人员纪念</h1>
+        <div class="nav-controls">
+          <button id="viewToggle" class="btn">
+            <i class="fas fa-map-marked-alt"></i> 切换视图
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="stats" class="stats animate__animated animate__fadeIn"></section>
+
+    <section class="filters">
+      <div class="filter-group">
+        <select class="filter-select" id="occupationFilter">
+          <option value="all">所有职业</option>
+          <option value="医护人员">医护人员</option>
+          <option value="公务员">公务员</option>
+          <option value="警察">警察</option>
+        </select>
+
+        <select class="filter-select" id="ageFilter">
+          <option value="all">所有年龄</option>
+          <option value="20-30">20-30岁</option>
+          <option value="31-40">31-40岁</option>
+          <option value="41-50">41-50岁</option>
+          <option value="51-60">51-60岁</option>
+          <option value="60+">60岁以上</option>
+        </select>
+
+        <select class="filter-select" id="sortSelect">
+          <option value="date">按日期排序</option>
+          <option value="age">按年龄排序</option>
+          <option value="name">按姓名排序</option>
+        </select>
+      </div>
+
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="搜索姓名、地区或职业...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </section>
+
+    <section class="view-container">
+      <div id="gridView" class="list animate__animated animate__fadeIn"></div>
+      <div id="mapView" class="map-container" style="display: none;"></div>
+    </section>
+
+    <section class="charts">
+      <div class="chart-container">
+        <canvas id="occupationChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="ageChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="timelineChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>永远铭记他们的付出与牺牲</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://webapi.amap.com/maps?v=2.0&key=your_key"></script>
+  <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,82 @@
+<!--
+	
+	In memory of all those who have passed away in these sufferings.
+
+	Code written by Ruoxin Mao.
+	Copyright Ruoxin Mao. All Rights Reserved.
+
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="我们不会忘记。为新冠肺炎疫情中逝去的抗疫英雄们建立的纪念网站。" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="theme-color" content="#25292B">
+		<meta property="og:title" content="新冠肺炎逝者名录 - 我们不会忘记">
+		<meta property="og:description" content="我们不会忘记。为新冠肺炎疫情中逝去的抗疫英雄们建立的纪念网站。">
+		<meta property="og:type" content="website">
+		<title>新冠肺炎逝者名录 - 我们不会忘记</title>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="canonical" href="https://ncov19.cn">
+		<link rel="preconnect" href="https://at.alicdn.com">
+	</head>
+
+	<body>
+		<div id="introContainer">
+			<div class="introTitleContainer song">
+				<div class="introTitleSub">据不完全统计，截至 2024 年 1 月</div>
+				<div class="introTitleMain"><span id="txtTotalDeath">620位</span><span id="txtIntroTitleMain">中国大陆抗疫人员在 COVID-19 新冠肺炎疫情中殉职</span></div>
+				<div class="introDescription">他们用生命守护人民健康，永远活在我们心中</div>
+			</div>
+			<div id="btnScrollDown"><i>&#xe627;</i>向下浏览</div>
+		</div>
+		<div id="mainContainer">
+			<div class="listTitle bold">抗疫殉职人员名录</div>
+			<div id="listContainer">
+				<div class="searchContainer">
+					<input type="text" id="searchInput" placeholder="搜索英雄名录..." title="搜索">
+					<i id="searchIcon">&#xe8b3;</i>
+				</div>
+				<div id="listSortContainer"><i>&#xe8b3;</i>
+					<select id="selectListSort" title="排序方式">
+						<option value="date">牺牲时间</option>
+						<option value="name">姓名</option>
+						<option value="age">年龄</option>
+						<option value="occupation">职务</option>
+						<option value="location">所在地</option>
+					</select>
+				</div>
+				<div id="listItemsContainer"></div>
+			</div>
+			<div class="memorialSection">
+				<div class="virtualFlowers" id="virtualFlowersContainer">
+					<h3>献花祭奠</h3>
+					<div class="flowerCount"><span id="flowerCount">0</span> 朵鲜花</div>
+					<button id="addFlower" class="flowerBtn">献上一朵花 🌹</button>
+				</div>
+			</div>
+			<div class="song" id="listEnd">人民英雄永垂不朽</div>
+			<div id="btnBacktoTop" title="返回顶部"><i>&#xe635;</i></div>
+			<footer>
+				<div class="footerContent">
+					<div>数据来源：官方公告、政府表彰和主流媒体报道</div>
+					<div class="
+				title="contribute" target="_blank">&copy; 2024 contribute</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div id="splashScr">
+			<div class="splashContent">
+				<span class="song" id="splashText">请肃穆</span>
+				<div class="loadingIndicator"></div>
+			</div>
+		</div>
+		
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

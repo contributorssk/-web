@@ -1,0 +1,224 @@
+:root {
+  --primary-color: #ffffff;
+  --accent-color: #e74c3c;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --card-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  --text-secondary: #a0a0a0;
+  --border-color: #2c2c2c;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 顶部导航栏 */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--card-shadow);
+  padding: 15px 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 统计面板 */
+.stats {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  margin: 20px 0;
+  border: 1px solid var(--border-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #232323, #1a1a1a);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #2a2a2a, #212121);
+}
+
+/* 搜索框样式 */
+.search {
+  position: relative;
+  margin: 30px 0;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  background: var(--card-bg);
+  color: var(--primary-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(231,76,60,0.3);
+  background: #252525;
+}
+
+/* 人员卡片列表 */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.person-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.person-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  background: #252525;
+}
+
+.person-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--accent-color);
+}
+
+.card-body p {
+  color: var(--text-secondary);
+}
+
+/* 筛选器样式 */
+.filter-select {
+  background: var(--card-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* 按钮样式 */
+.btn {
+  background: var(--card-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #252525;
+}
+
+/* 图表容器 */
+.chart-container {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid var(--border-color);
+}
+
+/* 加载动画 */
+.loading-spinner {
+  border: 4px solid var(--card-bg);
+  border-top: 4px solid var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* 页脚 */
+.footer {
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 响应式设计优化 */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 模态框样式 */
+.modal {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+} 
